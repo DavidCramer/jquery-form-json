@@ -1,7 +1,7 @@
-jQuery(function($){
+(function ( $ ) {
 
 	$.fn.formJSON = function(){
-		var fields       = $(this).serializeArray(),
+		var fields       = this.serializeArray(),
 		json         = {},
 		arraynames   = {};
 		for( var v = 0; v < fields.length; v++){
@@ -58,4 +58,4 @@ jQuery(function($){
 		return json;
 	}
 
-});
+}( jQuery ));
